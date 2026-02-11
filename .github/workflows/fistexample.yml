@@ -6,13 +6,18 @@ jobs:
         steps: 
         - name: clone the repo
           uses: actions/checkout@v6
-        - name: welocme mesage
-          run: echo "My first github actions"
+        - name: List and read the file
+          run: | 
+            echo "My first github actions"
+            ls -altr
+            cat README.md
+        - name: Generate Art ASCII work
+          run: cowsay -f king "King diagram" >> King.txt
 
-        - name: list files
-          run: ls -altr
+        #- name: list files
+        #  run: ls -altr
 
-        - name: read files
-          run: cat README.md
+        #- name: read files
+        #  run: cat README.md
         
           
