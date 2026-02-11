@@ -9,8 +9,11 @@ jobs:
         - name: List and read the file
           run: | 
             echo "My first github actions"
+            ################################
             ls -altr
+            ################################
             cat README.md
+            ################################
         - name: Generate Art ASCII work
           run: cowsay -f king "King diagram" >> King.txt
 
