@@ -1,7 +1,7 @@
 name: my first workflow
 on: push 
 jobs:
-    First_job: 
+    First_job with actions: 
         runs-on: ubuntu-latest
         steps: 
         - name: clone the repo
