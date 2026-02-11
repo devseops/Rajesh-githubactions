@@ -1,0 +1,30 @@
+name: Generate ASCII
+on: push 
+jobs:
+    ASCII_Job: 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: clone the repo
+          uses: actions/checkout@v6
+        - name: install the cowsay package
+          run: sudo apt-get install cowsay -y
+
+        - name: Execute cowsay command and Generate Art ASCII work
+          run: cowsay -f king "King diagram" >> King.txt
+
+        - name: check whether file exists
+          run: grep -i "king" King.txt
+
+        - name: Read the file 
+          run: cat King.txt 
+
+        - name: list the repo files
+          run: ls -altr
+
+        #- name: list files
+        #  run: ls -altr
+
+        #- name: read files
+        #  run: cat README.md
+        
+          
