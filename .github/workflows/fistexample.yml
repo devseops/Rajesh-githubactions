@@ -4,6 +4,8 @@ jobs:
     First_job: 
         runs-on: ubuntu-latest
         steps: 
+        - name: clone the repo
+          uses: actions/checkout@v6
         - name: welocme mesage
           run: echo "My first github actions"
 
