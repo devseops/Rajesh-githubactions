@@ -6,17 +6,18 @@ jobs:
         steps: 
         - name: clone the repo
           uses: actions/checkout@v6
+          
         - name: install the cowsay package
           run: sudo apt-get install cowsay -y
 
         - name: Execute cowsay command and Generate Art ASCII work
-          run: cowsay -f king "King diagram" >> King.txt
+          run: cowsay -f king "King diagram" >> king.txt
 
         - name: check whether file exists
-          run: grep -i "king" King.txt
+          run: grep -i "king" king.txt
 
         - name: Read the file 
-          run: cat King.txt 
+          run: cat king.txt 
 
         - name: list the repo files
           run: ls -altr
