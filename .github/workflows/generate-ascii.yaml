@@ -12,9 +12,9 @@ jobs:
           
         - name: Executeshell
           run: |
-          chmod +x shell.sh
-          ls -altr
-          ./shell.sh
+            chmod +x shell.sh
+            ls -altr
+            ./shell.sh
         
 
        
