@@ -11,7 +11,10 @@ jobs:
           run: ls -altr
           
         - name: Executeshell
-          run: ./shell.sh
+          run: |
+          chmod +X shell.shell:
+          ls -altr
+          ./shell.sh
         
 
        
