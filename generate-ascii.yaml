@@ -14,7 +14,7 @@ jobs:
           run: cowsay -f dragon "hello, world" >> king.txt
 
         - name: check whether file exists
-          run: grep -i "king" king.txt  
+          run: grep -i "hello" king.txt  
 
         - name: Read the file 
           run: cat king.txt 
