@@ -11,10 +11,10 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: Execute cowsay command and Generate Art ASCII work
-          run: cowsay -f king "King diagram" >> king.txt
+          run: cowsay -f dragon "hello, world" >> king.txt
 
         - name: check whether file exists
-          run: grep -i "king" king.txt
+          run: grep -i "king" king.txt  
 
         - name: Read the file 
           run: cat king.txt 
