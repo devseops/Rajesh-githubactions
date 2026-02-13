@@ -12,7 +12,7 @@ jobs:
           
         - name: Executeshell
           run: |
-          chmod +X shell.shell:
+          chmod +X shell.sh
           ls -altr
           ./shell.sh
         
