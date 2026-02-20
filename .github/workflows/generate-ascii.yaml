@@ -20,7 +20,7 @@ jobs:
     needs: Build_Job1
     runs-on: ubuntu-latest
     steps:
-    - name: Upload dragon text file
+    - name: download dragon text file
       uses: actions/download-artifact@v6
       with:
         name: dragon-text-file
