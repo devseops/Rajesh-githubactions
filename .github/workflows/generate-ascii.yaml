@@ -10,6 +10,7 @@ jobs:
     - name: Execute Cowsay CMD
       run: cowsay -f dragon "Run cover Iam dragon" >> dragon.txt
   Test_Job2:
+    needs: Build_Job1
     runs-on: ubuntu-latest
     steps:
     - name: sleep for 10 secs
@@ -19,6 +20,7 @@ jobs:
       run: grep -i "dragon" dragon.txt
 
   Deploy_Job3:
+    needs: Test_Job2
     runs-on: ubuntu-latest
     steps:
     - name: Read File
