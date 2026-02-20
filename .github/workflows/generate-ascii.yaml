@@ -1,20 +1,27 @@
 name: Generate ASCII
 on: push 
 jobs:
-    ASCII_Job: 
-        runs-on: ubuntu-latest
-        steps: 
-        - name: clone the repo
-          uses: actions/checkout@v6
-
-        - name: list the repo files
-          run: ls -altr
-          
-        - name: Executeshell
-          run: |
-            chmod +x shell.sh
-            ls -altr
-            ./shell.sh
+  Build_Job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Cowsay program
+      run: sudo apt-get install cowsay
         
+    - name: Execute Cowsay CMD
+      run: cowsay -f dragon "Run cover Iam dragon" >> dragon.txt
+  Test_Job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sleep for 10 secs
+      run: sleep 10
 
-       
+    - name: test file exists
+      run: grep -i "dragon" dragon.txt
+
+  Deploy_Job3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Read File
+      run: cat dragon.txt
+     
+      
